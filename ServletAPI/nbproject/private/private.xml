@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/user/Documents/NetBeansProjects/ServletAPI/src/java/Models/Service/EncargadoService.java</file>
+            <file>file:/C:/Users/user/Documents/NetBeansProjects/ServletAPI/src/java/Models/Dao/EncargadoDAOImp.java</file>
+            <file>file:/C:/Users/user/Documents/NetBeansProjects/ServletAPI/src/java/Models/Utilities/DB.java</file>
+            <file>file:/C:/Users/user/Documents/NetBeansProjects/ServletAPI/src/java/Models/Entity/Encargado.java</file>
+            <file>file:/C:/Users/user/Documents/NetBeansProjects/ServletAPI/src/java/Models/Utilities/Encriptacion.java</file>
+            <file>file:/C:/Users/user/Documents/NetBeansProjects/ServletAPI/web/Resources/salt.txt</file>
+            <file>file:/C:/Users/user/Documents/NetBeansProjects/ServletAPI/src/java/Models/Dao/Interface/CrudObjects.java</file>
+            <file>file:/C:/Users/user/Documents/NetBeansProjects/ServletAPI/src/java/Models/Service/ProbadorService.java</file>
+            <file>file:/C:/Users/user/Documents/NetBeansProjects/ServletAPI/src/java/Models/Utilities/ArchivoEnv.java</file>
+            <file>file:/C:/Users/user/Documents/NetBeansProjects/ServletAPI/src/java/Models/Dao/Interface/IEncargadoDAO.java</file>
+        </group>
+    </open-files>
+</project-private>
