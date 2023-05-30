@@ -45,13 +45,18 @@ public class EncargadoService {
         encargadoDAOImp.insertObject(encargado);
     }
     
-    public void obtenerEncargado(String claveTrabajador){
+    public void autenticarEncargado(String claveTrabajador,String password){
         Encargado encargado = encargadoDAOImp.getObject(claveTrabajador);
-        System.out.println(encargado.getIdEncargado());
-        System.out.println(encargado.getNombre());
-        System.out.println(encargado.getClaveTrabajador());
+        byte[] salt = ArchivoEnv.buscarBytesEnArchivo((int)encargado.getIdEncargado(), PATH);
+        boolean bandera = Encriptacion.isEqual(encargado.getPassword(), Encriptacion.generateHashedPassword(password, salt));
+        if(bandera){
+            System.out.println("Usuario Valido");
+        }else{
+            System.out.println("Usuario Invalido");
+        }
     }
 
+    
     
 
 }

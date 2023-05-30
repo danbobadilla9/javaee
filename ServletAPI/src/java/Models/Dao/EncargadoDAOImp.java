@@ -85,11 +85,20 @@ public Encargado getObject(String cadena) {
             // Leer el primer registro si existe
             encargado = new Encargado(rs.getLong(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getBytes(5), rs.getString(6));
         }
+        ps.close();
     } catch (SQLException e) {
         System.out.println("Error al obtener Encargado: " + e.getMessage());
+    }finally {
+        ps = null;
+        CON.closeConnection();
     }
     return encargado;
 }
+
+    @Override
+    public List<Encargado> listObjects() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 
     
 }

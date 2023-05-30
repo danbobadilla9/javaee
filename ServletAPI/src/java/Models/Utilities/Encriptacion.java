@@ -33,5 +33,17 @@ public class Encriptacion {
         }
         return hashedBytes;
     }
-
+    
+    public static boolean isEqual(byte[] hash, byte[] password){
+        if(hash.length == password.length){
+            for(int i = 0 ; i < hash.length; i++){
+                if(hash[i] != password[i]){
+                    return false;
+                }
+            }
+            return true;
+        }
+        return false;
+    }
+    
 }

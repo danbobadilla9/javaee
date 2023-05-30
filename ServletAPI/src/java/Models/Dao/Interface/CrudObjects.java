@@ -16,6 +16,7 @@ public interface CrudObjects<T extends Object> {
     boolean updateObject(T objeto);
     boolean deleteObject(T objeto);
     List<T> listObjects(String objeto);
+    List<T> listObjects();
     T getObject(int id);
     T getObject(String cadena);
     

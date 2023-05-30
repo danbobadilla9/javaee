@@ -25,30 +25,37 @@ public class DB {
     private static DB instance;
     private Connection connection;
 
+//    private DB() {
+//        try {
+//            Class.forName(DRIVER);
+//            connection = DriverManager.getConnection(URL, USERNAME, PASSWORD);
+//        } catch (SQLException e) {
+//            System.out.println("Error al conectar a la base de datos: " + e.getMessage());
+//        } catch (ClassNotFoundException ex) {
+//            Logger.getLogger(DB.class.getName()).log(Level.SEVERE, null, ex);
+//        }
+//    }
     private DB() {
-        try {
+        this.connection = null;
+    }
+
+    public Connection getConnection() {
+         try {
             Class.forName(DRIVER);
-            connection = DriverManager.getConnection(URL, USERNAME, PASSWORD);
+            this.connection = DriverManager.getConnection(URL, USERNAME, PASSWORD);
         } catch (SQLException e) {
             System.out.println("Error al conectar a la base de datos: " + e.getMessage());
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(DB.class.getName()).log(Level.SEVERE, null, ex);
         }
+         return this.connection;
     }
 
-    public static DB getInstance() {
+    public static synchronized DB getInstance() {
         if (instance == null) {
-            synchronized (DB.class) {
-                if (instance == null) {
-                    instance = new DB();
-                }
-            }
+            instance = new DB();
         }
         return instance;
-    }
-
-    public Connection getConnection() {
-        return connection;
     }
 
     public void closeConnection() {
@@ -56,8 +63,7 @@ public class DB {
             connection.close();
         } catch (SQLException e) {
             System.out.println("Error al cerrar la conexión a la base de datos: " + e.getMessage());
-        }finally{
-            connection = null;
+        } finally {
         }
     }
 }
