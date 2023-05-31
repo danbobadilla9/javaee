@@ -19,17 +19,43 @@ public class ProbadorService {
 //        encargadoService.autenticarEncargado("D19100","Dard1");
 //        encargadoService.autenticarEncargado("D19100","Dan");
         
-        //REGISTRANDO SISTEMAS
         ConsultaService consultaService = new ConsultaService();
+        //REGISTRANDO SISTEMAS
 //        consultaService.insertarSistema();
 
         //REGISTRANDO PRUEBAS
 //        consultaService.insertarTipoPrueba();
-        
+
+        //REGISTRANDO FUNCIONALIDAD
+//        consultaService.insertarFuncionalidad();
+
+        //REGISTRANDO FECHA
+//        consultaService.insertarFecha();
+
+        //REGISTRANDO PROGRAMDAS
+//        consultaService.insertarProgramadas();
+
+        // REGISTRANDO GUIONES 
+//        consultaService.insertarGuion();
+
         //LISTADO TODOS LOS SISTEMAS
-        consultaService.getAllSistemas();
+//        consultaService.getAllSistemas();
 
         //LISTANDO TODAS LAS PRUEBAS
-        consultaService.getAllTipoPruebas();
+//        consultaService.getAllTipoPruebas();
+        
+        //LISTANDO TODAS LAS FUNCIONALIDADES
+//        consultaService.getAllFuncionalidades();
+
+        //LISTANDO TODAS LAS FECHAS
+//        consultaService.getAllFechas();
+
+        //LISTANDO TODOS LOS GUIONES
+        consultaService.getAllGuiones();
+        
+
+
+        //OBTENER EL FILTRO
+//        consultaService.filtroCargaArchivos();
     }
 }
